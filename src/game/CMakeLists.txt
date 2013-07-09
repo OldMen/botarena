@@ -12,7 +12,7 @@ include( ${QT_USE_FILE} )
 
 # =============================================================================================
 
-INCLUDE_DIRECTORIES( ${core_SOURCE_DIR} ${arena_SOURCE_DIR} ${view_SOURCE_DIR} )
+include_directories( ${core_SOURCE_DIR} ${arena_SOURCE_DIR} ${view_SOURCE_DIR} )
 
 set( game_HEADERS  )
 set( game_SOURCES main.cpp )
