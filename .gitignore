@@ -16,8 +16,13 @@
 .kdev4
 *.kdev4
 
+# QtCreator files
+*.user
+
 # Build files
 build
 
 # Backup files
 *~
+# Html documentation files
+doc/html

@@ -8,21 +8,29 @@
 #include <QObject>
 #include "scriptengine.h"
 
+/**
+ * @file botscheduler.h
+ * @brief Планировщик ботов
+ */
+
 namespace botarena
 {
 namespace core
 {
 
+/**
+ * @brief Планировщик ботов
+ */
 class BotScheduler : public QObject
 {
 	Q_OBJECT
 public:
-    explicit BotScheduler( QObject *parent = 0 );
+	explicit BotScheduler( QObject *parent = 0 );
 
 	/**
-	 * @brief Инсталлировать API в скриптовый движек
-	 * 
-	 * @param eng ссылка на движек
+	 * @brief Инсталлировать API в скриптовый движок
+	 *
+	 * @param eng ссылка на движок
 	 */
 	virtual	void	installTo( core::ScriptEngine &eng );
 
@@ -38,15 +46,15 @@ signals:
 	
 public slots:
 	/**
-	 * @brief Добавить бот в очередь шедулер
-	 * 
+	 * @brief Добавить бот в очередь планировщика
+	 *
 	 * @param name имя бота
 	 * @param epoint точка входа в функцию бота
 	 */
 	void			appendBot( const QString &name, const QScriptValue &epoint );
 	/**
-	 * @brief Удалить бот из очереди шедулера
-	 * 
+	 * @brief Удалить бот из очереди планировщика
+	 *
 	 * @param name имя бота
 	 */
 	void			removeBot( const QString &name );
@@ -59,7 +67,7 @@ public slots:
 protected:
 	/**
 	 * @brief Найти в очереди индекс бота с указанным именем
-	 * 
+	 *
 	 * @param name имя бота
 	 * @return int индекс бота или -1, если бота с таким именем нет в очереди
 	 */
