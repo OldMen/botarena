@@ -8,14 +8,35 @@
 #include <QObject>
 #include <QScriptEngine>
 
+/**
+ * @file scriptengine.h
+ * @brief Скриптовый движок
+ */
+
+/*!
+ * @namespace botarena
+ * @brief BotArena
+ *
+ * Основное пространство имен проекта BotArena.
+ */
 namespace botarena
 {
+/*!
+ * @namespace botarena::core
+ * @brief Ядро арены ботов
+ *
+ * Содержит классы ядра арены ботов.
+ */
 namespace core
 {
 
 typedef	QScriptEngine 						ScriptEngineType;
 typedef	QScriptEngine::FunctionSignature	ScriptFunction;
 
+/**
+ * @brief Скриптовый движок
+ *
+ */
 class ScriptEngine : public QObject
 {
 	Q_OBJECT
@@ -45,7 +66,7 @@ public:
 	 * @param func указатель на функцию
 	 */
 	void				regFunc( const QString &nspace, const QString &nfunc, ScriptFunction func );
-	
+
 	/**
 	 * @brief Регистрация объекта в скриптовом окружении
 	 * 
@@ -55,7 +76,7 @@ public:
 	void				regObject( const QString &nobj, QObject *obj );
 	
 private:
-	ScriptEngineType	m_engine;			//!< Нативный скриптовый движек
+	ScriptEngineType	m_engine;			//!< Нативный скриптовый движок
 };
 
 }

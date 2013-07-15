@@ -9,6 +9,11 @@
 
 class QTimer;
 
+/**
+ * @file timeline.h
+ * @brief Генератор времени
+ */
+
 namespace botarena
 {
 namespace core
