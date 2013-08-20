@@ -46,7 +46,7 @@ void ScriptEngine::regFunc( const QString &nspace, const QString &nfunc, ScriptF
 		ns = m_engine.newObject();
 		m_engine.globalObject().setProperty( nspace, ns );
 	}
-		
+
 	QScriptValue funcValue = m_engine.newFunction( func );
 	ns.setProperty( nfunc, funcValue );
 }
